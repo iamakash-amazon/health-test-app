@@ -1,0 +1,74 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Test app for the AWS Health readiness analysis (gamma)
+Resources:
+  HealthTestNodejs18X:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-nodejs18-x
+      Runtime: nodejs18.x
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestNodejs20X:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-nodejs20-x
+      Runtime: nodejs20.x
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestNodejs16X:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-nodejs16-x
+      Runtime: nodejs16.x
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestPython310:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-python3-10
+      Runtime: python3.10
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestPython39:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-python3-9
+      Runtime: python3.9
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestPython38:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-python3-8
+      Runtime: python3.8
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestRuby32:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-ruby3-2
+      Runtime: ruby3.2
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestDotnet8:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-dotnet8
+      Runtime: dotnet8
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestDotnet6:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-dotnet6
+      Runtime: dotnet6
+      Handler: index.handler
+      CodeUri: src/
+  HealthTestProvidedAl2:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: health-test-provided-al2
+      Runtime: provided.al2
+      Handler: index.handler
+      CodeUri: src/
